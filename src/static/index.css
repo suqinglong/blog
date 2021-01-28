@@ -1,0 +1,23 @@
+html {
+  padding: 10px;
+}
+
+aside {
+  float: left;
+  margin-right: 25px;
+}
+
+aside a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333;
+}
+
+article {
+  display: flow-root;
+  white-space: pre;
+}

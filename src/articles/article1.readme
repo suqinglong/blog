@@ -1,0 +1,33 @@
+## Node Buffer
+
+1. 是什么
+Buffer对象用来表示固定长度的序列化字节, 被开辟的区域在v8 javascript 引擎之外。
+
+2. 何时需要
+Buffer跟Stream深度关联，当一个stream进程的接收速度大于处理速度，就把data放入Buffer。
+
+3. 创建
+const buf1 = Buffer.alloc(10)
+const buf3 = Buffer.allocUnsafe(10)
+const buf4 = Buffer.from([1, 2, 3])
+
+4. 使用
+const buf = Buffer.from("Hey!)
+console.log(buf[0]) //72
+console.log(buf[1]) //101
+console.log(buf.toString())
+
+buf.length
+
+for (const item of buf) {
+  console.log(item)// 72 101 
+}
+
+buf.write('Hay!')
+buf[1] = 111
+
+let bufcopy = Buffer.alloc(4)
+buf.copy(bufcopy)
+
+buf.slice(0) // start point
+buf.slice(0, 2) // start point, end point

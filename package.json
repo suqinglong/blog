@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My blog",
+  "main": "dist/index.js",
+  "author": "suer",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "tsc": "tsc && cp -rf ./src/static/* ./dist/static && cp -rf ./src/articles ./dist/",
+    "start": "yarn tsc && node ."
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "@types/pug": "^2.0.4",
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "typescript": "^4.1.3"
+  }
+}
